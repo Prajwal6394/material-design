@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 const Create = () => {
+    
   return (
     <Container>
       <Typography
@@ -17,7 +18,7 @@ const Create = () => {
       </Typography>
 
       <Button
-        color="secondary"
+        color="primary"
         variant="contained"
         onClick= {() => console.log('You clicked Here')}
         endIcon = {<DoubleArrowIcon/>}
