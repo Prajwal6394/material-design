@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Typography from "@mui/material/Typography";
+
 
 const Create = () => {
   return (
-    <div>Create</div>
-  )
-}
+    <div>
+     <Typography variant="h3"
+     component= "h2"
+     gutterButtom
+     color= 'textSecondary'>
+         Create a New Note
+     </Typography>
+    </div>
+  );
+};
 
-export default Create
+export default Create;

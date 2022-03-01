@@ -7,10 +7,10 @@ function App() {
   return (
    <Router>
      <Switch>
-       <Route exact path= "/">
+       <Route exact path= "/" >
          <Notes/>
        </Route>
-        <Route exact path={"/Create"}> 
+        <Route exact path="/Create"> 
           <Create/>
         </Route>
      </Switch>
