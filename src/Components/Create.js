@@ -18,7 +18,7 @@ const Create = () => {
       </Typography>
 
       <Button
-        color="primary"
+        color="secondary"
         variant="contained"
         onClick= {() => console.log('You clicked Here')}
         endIcon = {<DoubleArrowIcon/>}

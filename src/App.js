@@ -2,19 +2,29 @@ import React from "react";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Create from "./Components/Create";
 import Notes from "./Components/Notes";
-import {createTheme, ThemeProvider} from '@material-ui/core/styles'
+// import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles'
+// import {purple} from '@material-ui/core/colors'
+// const theme = MuiCreateTheme({
+//   palette:{
+//     primary:{
+//       main : '#fefefe'
+//     },
+//     secondary: purple
+//   },
 
+//   typography:{
+//     fontFamily: 'Quicksand',
+//     fontWeightLight: 400,
+//     fontWeightRegular: 500,
+//     fontWeightMedium: 600,
+//     fontWeightBold: 700,
 
-const theme = createTheme({
-  palette:{
-    primary:{
-      main: '#fefefe'
-    }
-  }
-})
+//   }
+// })
 function App() {
   return (
-    <ThemeProvider theme = {theme}>
+
+    // <MuiThemeProvider theme = {theme}>
    <Router>
      <Switch>
        <Route exact path= "/" >
@@ -25,7 +35,7 @@ function App() {
         </Route>
      </Switch>
    </Router>
-   </ThemeProvider>
+  //  </MuiThemeProvider>
   );
 }
 
