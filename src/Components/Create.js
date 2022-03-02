@@ -2,10 +2,19 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import { TextField } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-const Create = () => {
-    
+const useStyles = makeStyles({
+  field: {
+    marginTop: 20,
+    marginBottom: 20,
+    display: "block",
+  },
+});
+export default function Create() {
+  const classes = useStyles();
   return (
     <Container>
       <Typography
@@ -17,20 +26,29 @@ const Create = () => {
         Create a New Note
       </Typography>
 
+      <form noValidate autoComplete="off">
+        <TextField
+          className={classes.field}
+          label="Note Here"
+          variant="outlined"
+          color="secondary"
+          fullWidth
+          required
+        />
+      </form>
+
       <Button
-        color="secondary"
+        color="primary"
         variant="contained"
-        onClick= {() => console.log('You clicked Here')}
-        endIcon = {<DoubleArrowIcon/>}
+        onClick={() => console.log("You clicked Here")}
+        endIcon={<DoubleArrowIcon />}
       >
         SUBMIT
       </Button>
-      <br/>
+      <br />
       {/* <FitbitIcon/>
       <FitbitIcon color = 'secondary' fontSize="large"/>
       <FitbitIcon color = "Disabled"/> */}
     </Container>
   );
-};
-
-export default Create;
+}
