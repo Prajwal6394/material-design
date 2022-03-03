@@ -1,5 +1,6 @@
 import React from "react";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Layout from "./Cards/Layout";
 import Create from "./Components/Create";
 import Notes from "./Components/Notes";
 // import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles'
@@ -23,19 +24,20 @@ import Notes from "./Components/Notes";
 // })
 function App() {
   return (
-
     // <MuiThemeProvider theme = {theme}>
-   <Router>
-     <Switch>
-       <Route exact path= "/" >
-         <Notes/>
-       </Route>
-        <Route exact path="/Create"> 
-          <Create/>
-        </Route>
-     </Switch>
-   </Router>
-  //  </MuiThemeProvider>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/">
+            <Notes />
+          </Route>
+          <Route exact path="/Create">
+            <Create />
+          </Route>
+        </Switch>
+      </Layout>
+    </Router>
+    //  </MuiThemeProvider>
   );
 }
 
