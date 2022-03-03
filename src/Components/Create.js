@@ -9,6 +9,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import { FormControl } from "@mui/material";
 import { FormLabel } from "@mui/material";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 // const useStyles = makeStyles({
 //   root: {
@@ -18,6 +19,7 @@ import { FormLabel } from "@mui/material";
 // });
 export default function Create() {
   const [title, setTitle] = useState("");
+  const history = useHistory()
   const [details, setDetails] = useState("");
   const [titleError, setTitleError] = useState(false);
   const [categories, setCategories] = useState("");
@@ -35,7 +37,11 @@ export default function Create() {
       setDetailsError(true);
     }
     if (title && details) {
-      console.log(title, details, categories);
+      fetch('http://localhost:8000/notes',{
+        method : 'POST',
+        headers: {"Content-type": "application/json"}
+        ,body: JSON.stringify({title, details,categories})
+      }).then (() => history.push('/'))
     }
   };
 
