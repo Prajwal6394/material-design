@@ -7,10 +7,9 @@ import { TextField } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
-  field: {
-    marginTop: 20,
-    marginBottom: 20,
-    display: "block",
+  root: {
+    border: "10px solid red",
+    // backgroundColor: 'blue',
   },
 });
 export default function Create() {
@@ -28,7 +27,7 @@ export default function Create() {
 
       <form noValidate autoComplete="off">
         <TextField
-          className={classes.field}
+          className={classes.root}
           label="Note Here"
           variant="outlined"
           color="secondary"
@@ -38,6 +37,7 @@ export default function Create() {
       </form>
 
       <Button
+        className={classes.root}
         color="primary"
         variant="contained"
         onClick={() => console.log("You clicked Here")}
