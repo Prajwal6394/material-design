@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
-import { Paper } from "@mui/material";
+//import { Paper } from "@mui/material";
 import { Container } from "@mui/material";
+import NoteCard from "../Cards/NoteCard";
 const Notes = () => {
   const [notes, setNotes] = useState([]);
   useEffect(() => {
@@ -9,6 +10,15 @@ const Notes = () => {
       .then((res) => res.json())
       .then((data) => setNotes(data));
   }, []);
+
+  const handleDelete = async (id) => {
+    await fetch("http://localhost:8000/notes" + id, {
+      method: "DELETE"
+    })
+
+    const newNotes = notes.filter(notes => notes.id !== id);
+    setNotes(newNotes);
+  }
   return (
     <div>
       <Container>
@@ -26,10 +36,10 @@ const Notes = () => {
           <Paper>4</Paper>
         </Grid>
       </Grid> */}
-        <Grid container>
+        <Grid container spacing={3}>
           {notes.map((note) => (
             <Grid item key={note.id} xs={12} md={4} sm={6}>
-              <Paper>{note.title} </Paper>
+              <NoteCard note={note} handleDelete={handleDelete} />
             </Grid>
           ))}
         </Grid>
