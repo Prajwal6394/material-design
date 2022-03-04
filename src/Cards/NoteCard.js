@@ -8,11 +8,14 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { DeleteOutlined } from "@mui/icons-material";
 
 
+
 export default function NoteCard({ note , handleDelete}) {
   return (
     <div>
-      <Card elevation={1}>
+      <Card elevation={1} style = {{marginTop:"70px"}}>
         <CardHeader
+
+       
           action={
             <IconButton onClick={() => handleDelete(note.id)}>
               <MoreVertIcon />

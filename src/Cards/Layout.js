@@ -7,9 +7,14 @@ import { ListItemIcon } from "@mui/material";
 import { ListItemText } from "@material-ui/core";
 import { AddCircleOutlined, SubjectOutlined } from "@mui/icons-material";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-
+import { AppBar } from "@mui/material";
+import Toolbar from "@material-ui/core/Toolbar";
+import { styled } from '@mui/material/styles';
+import {format} from 'date-fns';
+import { Avatar } from "@mui/material";
 
 const drawerWidth = 240;
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 function Layout({ children }) {
   const history = useHistory();
@@ -29,12 +34,26 @@ function Layout({ children }) {
 
   return (
     <div style={{ display: "flex" }}>
+       <React.Fragment>
+      <AppBar position="fixed"  style={{marginBottom : "40px"}}>
+        <Toolbar>
+          <Typography style={{flexGrow :"1"}}>
+         Today is the {format(new Date(), 'do MMMM Y')}
+          </Typography>
+          <Typography>
+            Mario
+          </Typography>
+          <Avatar  src = "AvatarImage.png" style={{marginLeft : "8px"}}/>
+        </Toolbar>
+      </AppBar>
+      <Offset />
+    </React.Fragment>
       <Drawer
         variant="permanent"
         anchor="left"
         sx={{
-          display: { xs: 'block', sm: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          display: { xs: "block", sm: "none" },
+          "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
         }}
       >
         <div>
@@ -55,7 +74,11 @@ function Layout({ children }) {
         </List>
       </Drawer>
 
-      <div style={{ background: "#f9f9f9", width: "100%" }}>{children}</div>
+      <div style={{ background: "#f9f9f9", width: "100%" }}>
+        
+          {children}
+          
+      </div>
     </div>
   );
 }

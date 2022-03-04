@@ -23,6 +23,18 @@
       "details": "at four PM",
       "categories": "reminders",
       "id": 4
+    },
+    {
+      "title": "Hekdnvjb",
+      "details": "jdvnkdnvjadva",
+      "categories": "Money",
+      "id": 5
+    },
+    {
+      "title": "Money",
+      "details": "I have to complele the task",
+      "categories": "todos",
+      "id": 6
     }
   ]
 }
