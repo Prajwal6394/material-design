@@ -57,7 +57,7 @@ function Layout({ children }) {
         }}
       >
         <div>
-          <Typography variant="h5">Super Notes</Typography>
+          <Typography variant="h5" style={{marginLeft: "10px"}}>Super Notes</Typography>
         </div>
 
         <List>
