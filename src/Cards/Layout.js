@@ -34,7 +34,7 @@ function Layout({ children }) {
 
   return (
     <div style={{ display: "flex" }}>
-       <React.Fragment>
+       <div>
       <AppBar position="fixed"  style={{marginBottom : "40px"}}>
         <Toolbar>
           <Typography style={{flexGrow :"1"}}>
@@ -47,17 +47,17 @@ function Layout({ children }) {
         </Toolbar>
       </AppBar>
       <Offset />
-    </React.Fragment>
-      <Drawer
+    </div>
+      <Drawer style={{paddingTop: "50px"}}
         variant="permanent"
         anchor="left"
         sx={{
-          display: { xs: "block", sm: "none" },
+          mt: 50,
           "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
         }}
       >
         <div>
-          <Typography variant="h5" style={{marginLeft: "10px"}}>Super Notes</Typography>
+          <Typography variant="h5" >Super Notes</Typography>
         </div>
 
         <List>
