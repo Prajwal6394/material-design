@@ -1,28 +1,10 @@
 {
   "notes": [
     {
-      "title": "Hello",
-      "details": "I will do my work",
-      "categories": "todos",
-      "id": 8
-    },
-    {
-      "title": "Rishabs",
-      "details": "I have to take rishab work at any cost",
-      "categories": "work",
-      "id": 9
-    },
-    {
-      "title": "rwhgwrh",
-      "details": "eshjhstj",
-      "categories": "todos",
-      "id": 10
-    },
-    {
-      "title": "Hello ",
-      "details": "I have to complete this project by tonight\n",
-      "categories": "todos",
-      "id": 11
+      "title": "Manage Your Day",
+      "details": "Make a list of work",
+      "categories": "reminders",
+      "id": 2
     }
   ]
 }

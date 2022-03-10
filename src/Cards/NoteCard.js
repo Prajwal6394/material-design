@@ -6,6 +6,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { DeleteOutlined } from "@mui/icons-material";
+import '/home/terminator/Desktop/react/material-design/src/Components/Notes.js'
+
 
 
 
